@@ -13,6 +13,7 @@ Card HighBot::makeAction(const Observation& obs, const IntMatrix& legal)
             {
                 choice.suit=suit;
                 choice.rank=rank;
+                return choice;
             }
         }
     }
