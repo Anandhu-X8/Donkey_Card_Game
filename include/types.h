@@ -8,8 +8,8 @@ struct Card
     Card()=default;
     Card(int s, int r) // suit is first
     {
-        rank=r;
         suit =s;
+        rank=r;
     }
 };
 
