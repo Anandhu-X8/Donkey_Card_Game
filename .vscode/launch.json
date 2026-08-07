@@ -2,22 +2,14 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch",
-      "type": "lldb",
-      "request": "launch",
-      "program": "${workspaceRoot}/<your program>",
-      "args": [],
-      "cwd": "${workspaceRoot}"
-    },
-    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/acerr/OneDrive/Documents/Donki/Donkey_Card_Game",
-      "program": "c:/Users/acerr/OneDrive/Documents/Donki/Donkey_Card_Game/build/Debug/outDebug",
+      "cwd": "c:/Users/acerr/OneDrive/Documents/myDonki/Donkey_Card_Game",
+      "program": "c:/Users/acerr/OneDrive/Documents/myDonki/Donkey_Card_Game/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
