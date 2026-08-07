@@ -9,7 +9,7 @@ Card LowBot::makeAction(const Observation& obs, const Legal& legal)
     {
         for(int suit=0; suit<4; suit++)
         {
-            if(legal[suit][rank]==1)
+            if(legal.legalcards[suit][rank]==1)
             // we found the card
             {
                 choice.suit=suit;

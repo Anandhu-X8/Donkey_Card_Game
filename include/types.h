@@ -18,12 +18,12 @@ using IntVector = std::vector<int>;
 
 struct Legal
 {
-    IntMatrix legal;
+    IntMatrix legalcards;
     bool cut;
 
     Legal()=default;
     Legal(IntMatrix matrix, bool bl)
-    :legal(matrix), cut(bl)
+    :legalcards(matrix), cut(bl)
     {}
 };
 struct Observation

@@ -14,7 +14,7 @@ class Bot
     virtual ~Bot() = default;
 
     //main function to be called by engine; =0 gives responsibility of definition to child
-    virtual Card makeAction(const Observation& obs, const IntMatrix& legal)=0;
+    virtual Card makeAction(const Observation& obs, const Legal& legal)=0;
 
 };
 

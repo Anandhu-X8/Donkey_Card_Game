@@ -6,7 +6,7 @@ note that the bot doesn't have to do any checking
 it is all done by the engine. the bot simply has to choose a card among the legal ones given (by engine)
 */
 
-Card RandomBot::chooseRandom(const IntMatrix& legal)
+Card RandomBot::chooseRandom(const Legal& legal)
 {
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -16,7 +16,7 @@ Card RandomBot::chooseRandom(const IntMatrix& legal)
     {
         for(int rank=0; rank<13; rank++)
         {
-            if(legal[suit][rank]==1)
+            if(legal.legalcards[suit][rank]==1)
             {
                 ones.emplace_back(suit,rank); // to make it a pair
             }
@@ -30,7 +30,7 @@ Card RandomBot::chooseRandom(const IntMatrix& legal)
     return card;
 }
 // actually choose a card
-Card RandomBot::makeAction(const Observation& obs, const IntMatrix& legal)
+Card RandomBot::makeAction(const Observation& obs, const Legal& legal)
 {
     Card choice = chooseRandom(legal);
     return choice;

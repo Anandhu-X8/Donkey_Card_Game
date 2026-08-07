@@ -4,6 +4,6 @@
 class Rules
 {
     public:
-    static IntMatrix FindLegal(IntMatrix hand, Card leadcard); // if leading, no need for legality
+    static Legal FindLegal(IntMatrix hand, Card leadcard); // if leading, no need for legality
       
-}
+};
