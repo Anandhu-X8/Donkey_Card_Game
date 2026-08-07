@@ -1,4 +1,4 @@
-#include "Bots/HighBot.h"
+#include "bots/HighBot.h"
 
 Card HighBot::makeAction(const Observation& obs, const IntMatrix& legal)
 {
@@ -8,7 +8,7 @@ Card HighBot::makeAction(const Observation& obs, const IntMatrix& legal)
     {
         for(int suit=0; suit<4; suit++)
         {
-            if(legal[rank][suit]==1)
+            if(legal[suit][rank]==1)
             // we found the card
             {
                 choice.suit=suit;
