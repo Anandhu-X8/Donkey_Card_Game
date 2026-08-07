@@ -11,6 +11,6 @@ class RandomBot : public Bot
     //deconstructor
     virtual ~RandomBot() = default;
 
-    virtual Card makeAction(const Observation& obs, const IntMatrix& legal) override;
-    Card chooseRandom(const IntMatrix& legal);
+    virtual Card makeAction(const Observation& obs, const Legal& legal) override;
+    Card chooseRandom(const Legal& legal);
 };

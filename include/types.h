@@ -16,7 +16,16 @@ struct Card
 using IntMatrix = std::vector<std::vector<int>>;
 using IntVector = std::vector<int>;
 
+struct Legal
+{
+    IntMatrix legal;
+    bool cut;
 
+    Legal()=default;
+    Legal(IntMatrix matrix, bool bl)
+    :legal(matrix), cut(bl)
+    {}
+};
 struct Observation
 {
     IntMatrix RevealedInfo; // pass the public information

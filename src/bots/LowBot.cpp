@@ -1,7 +1,7 @@
 
 #include "bots/LowBot.h"
 
-Card LowBot::makeAction(const Observation& obs, const IntMatrix& legal)
+Card LowBot::makeAction(const Observation& obs, const Legal& legal)
 {
     Card choice(-1,-1); // ideally this shouldn't be returned. engine must prevent this(finished player!)
     // print highest card from legal

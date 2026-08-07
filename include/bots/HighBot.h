@@ -10,5 +10,5 @@ class HighBot : public Bot
     //deconstructor
     virtual ~HighBot() = default;
 
-    virtual Card makeAction(const Observation& obs, const IntMatrix& legal) override;
+    virtual Card makeAction(const Observation& obs, const Legal& legal) override;
 };

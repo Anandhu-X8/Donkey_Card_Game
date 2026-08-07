@@ -1,6 +1,6 @@
 #include "bots/HighBot.h"
 
-Card HighBot::makeAction(const Observation& obs, const IntMatrix& legal)
+Card HighBot::makeAction(const Observation& obs, const Legal& legal)
 {
     Card choice(-1,-1); // ideally this shouldn't be returned. engine must prevent this(finished player!)
     // print highest card from legal

@@ -10,5 +10,5 @@ class LowBot : public Bot
     //deconstructor
     virtual ~LowBot() = default;
 
-    virtual Card makeAction(const Observation& obs, const IntMatrix& legal) override;
+    virtual Card makeAction(const Observation& obs, const Legal& legal) override;
 };
