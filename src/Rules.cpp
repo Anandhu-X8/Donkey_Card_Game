@@ -1,6 +1,6 @@
 #include "Rules.h"
 
-Legal Rules::FindLegal(IntMatrix hand, Card leadcard) // if leading, no need for legality
+Legal Rules::FindLegal(Deck hand, Card leadcard) // if leading, no need for legality
 {
     int suit = leadcard.suit;
     for (int rank =0; rank<13; rank++)

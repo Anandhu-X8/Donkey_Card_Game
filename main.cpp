@@ -1,10 +1,9 @@
 #include <iostream>
 #include <vector>
-#include "include/types.h"
 #include "types.h"
 #include "Player.h"
 #include "bots/bots.h"
-void printMatrix(const IntMatrix& mat)
+void printMatrix(const Deck& mat)
 {
   for(const auto& row : mat)
   {
@@ -66,7 +65,10 @@ int main()
     p1.removeCard(c3);
 
     printMatrix(p1.getHand());
-
-
+    Observation o;
+    Legal l(p1.getHand(),false);
+    Card ccc=p1.makeAction(o,l);
+    
+    std::cout<<ccc.suit<<" "<<ccc.rank<<std::endl;
     return 0;
 }

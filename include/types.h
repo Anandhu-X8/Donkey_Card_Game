@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <array>
 
 struct Card
 {
@@ -17,29 +18,28 @@ struct Card
 // we need a vector of cards -> Pile
 using CardVector = std::vector<Card>;
 
-using IntMatrix = std::vector<std::vector<int>>;
+using Deck = std::array<std::array<int, 13>,4>;
 using IntVector = std::vector<int>;
 
 struct Legal
 {
-    IntMatrix legalcards;
+    Deck legalcards;
     bool cut;
 
     Legal()=default;
-    Legal(IntMatrix matrix, bool bl)
+    Legal(Deck matrix, bool bl)
     :legalcards(matrix), cut(bl)
     {}
 };
 struct Observation
 {
-    IntMatrix RevealedInfo; // pass the public information
+    Deck RevealedInfo; // pass the public information
     Card LeadingCard;
     bool IsLeading;
-    bool Cut;
 
     Observation()
+    // default cons is to just follow suit
     : RevealedInfo(4, std::vector<int>(13,0)),
-    IsLeading(false),
-    Cut(false)
+    IsLeading(false)
     {}
 };

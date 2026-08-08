@@ -9,7 +9,7 @@ class Player
     //In private , ID, pointer to bot, hand, and next pointer for incrementing
     private:
     int ID;
-    IntMatrix hand; // initialise with zeros in constructor
+    Deck hand; // initialise with zeros in constructor
     std::unique_ptr<Bot> controller;
     static int nextID;
 
@@ -23,5 +23,5 @@ class Player
     void removeCard(const Card& card);
     int getId() const;
     //additionally a getter function for get hand
-    const IntMatrix& getHand() const;
+    const Deck& getHand() const;
 };

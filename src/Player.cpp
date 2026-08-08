@@ -1,8 +1,9 @@
 #include "Player.h"
 int Player::nextID=0;
+
 Player::Player(std::unique_ptr<Bot> bot)
 :
- hand(4, std::vector<int>(13,0)),
+ hand{},
  ID(nextID++),
  controller(std::move(bot))
 {}
@@ -33,7 +34,7 @@ int Player::getId() const
 {
     return ID;
 }
-const IntMatrix& Player::getHand() const
+const Deck& Player::getHand() const
 {
     return hand;
 }
