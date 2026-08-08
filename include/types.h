@@ -13,6 +13,9 @@ struct Card
     }
 };
 
+// we need a vector of cards -> Pile
+using CardVector = std::vector<Card>;
+
 using IntMatrix = std::vector<std::vector<int>>;
 using IntVector = std::vector<int>;
 
