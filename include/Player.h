@@ -9,11 +9,12 @@ class Player
     //In private , ID, pointer to bot, hand, and next pointer for incrementing
     private:
     int ID;
-    IntMatrix hand;
+    IntMatrix hand; // initialise with zeros in constructor
     std::unique_ptr<Bot> controller;
     static int nextID;
 
     //In public, 
+    public:
     Player(std::unique_ptr<Bot> bot); // this is a parameter constructor
     ~Player()=default;
     Card makeAction(const Observation& obs, const Legal& legal);

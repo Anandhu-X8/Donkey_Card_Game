@@ -3,11 +3,12 @@
 
 struct Card
 {
-    int rank;
     int suit;
+    int rank;
     Card()=default;
     Card(int s, int r) // suit is first
     {
+        // card(2,9)(1,10). so onn
         suit =s;
         rank=r;
     }

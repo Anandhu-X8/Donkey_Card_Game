@@ -2,6 +2,7 @@
 int Player::nextID=0;
 Player::Player(std::unique_ptr<Bot> bot)
 :
+ hand(4, std::vector<int>(13,0)),
  ID(nextID++),
  controller(std::move(bot))
 {}
